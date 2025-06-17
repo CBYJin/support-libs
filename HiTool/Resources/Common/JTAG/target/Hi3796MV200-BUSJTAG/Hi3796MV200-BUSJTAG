@@ -1,0 +1,4 @@
+source [find target/Hi3796MV200-BUSJTAG/Hi3796MV200_target.cfg]
+init   
+dap apsel 2
+dap memaccess 8

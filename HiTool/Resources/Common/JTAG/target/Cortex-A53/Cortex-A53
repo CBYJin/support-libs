@@ -1,0 +1,3 @@
+source [find target/Cortex-A53/cortex_a53_target.cfg]
+init   
+reset init  

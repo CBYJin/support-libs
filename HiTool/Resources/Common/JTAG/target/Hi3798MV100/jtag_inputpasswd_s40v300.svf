@@ -1,0 +1,60 @@
+
+
+! attention TRSTN not controlled by JtagStudio, you should reset TRSTN manually
+
+FREQUENCY 1000000 HZ;
+STATE RESET;
+STATE IDLE;
+
+!RUNTEST IDLE 1000 TCK ;
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! the first input wrong jtag key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+!SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+!SDR 64 TDI (ffffffffffffffff) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(ffffffffffffffff);
+!SDR 64 TDI (00000000000000000) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(ffffffffffffffff);
+
+!password_rdy
+!SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+!SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);
+
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! the second input right jtag key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+!SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+!SDR 64 TDI (dffb3ee031674568) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+
+!password_rdy
+!SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+!SDR 1 TDI (1) SMASK (1) TDO (0) Mask(0);
+
+RUNTEST IDLE 1 TCK;
+
+!!!!!!!!!!!!!!!!!!!!!
+! the third input wrong key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (2354ab98d019ff3f) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+
+!password_rdy
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (1) SMASK (1) TDO (0) Mask(0);
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                              

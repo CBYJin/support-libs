@@ -1,0 +1,78 @@
+
+
+! attention TRSTN not controlled by JtagStudio, you should reset TRSTN manually
+
+FREQUENCY 1000000 HZ;
+STATE RESET;
+STATE IDLE;
+
+!RUNTEST IDLE 1000 TCK ;
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! the first input right jtag key
+!!!!!!!!!!!!!!!!!!!!!
+!input soc_jtag password0
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (000060201c924848) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!input soc_jtag_com[1] to write, soc_jtag_com[0] to start
+SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+SDR 32 TDI (2) SMASK (fffffffe) TDO (0) Mask(00000000);
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);
+RUNTEST IDLE 20 TCK ;
+
+!clear soc_jtag_com[0]
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (0) SMASK (1) TDO (1) Mask(1);
+
+
+!input soc_jtag password1
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (00006024d20740cf) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!input soc_jtag_com[1] to write, soc_jtag_com[0] to start
+SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+SDR 32 TDI (2) SMASK (fffffffe) TDO (0) Mask(00000000);
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);
+RUNTEST IDLE 20 TCK ;
+
+!clear soc_jtag_com[0]
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (0) SMASK (1) TDO (1) Mask(1);
+
+
+!input soc_jtag password2
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (00006028fad24a30) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!input soc_jtag_com[1] to write, soc_jtag_com[0] to start
+SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+SDR 32 TDI (2) SMASK (fffffffe) TDO (0) Mask(00000000);
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);
+RUNTEST IDLE 20 TCK ;
+
+!clear soc_jtag_com[0]
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (0) SMASK (1) TDO (1) Mask(1);
+
+
+!input soc_jtag password3s
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (0000602cd8795743) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!input soc_jtag_com[1] to write, soc_jtag_com[0] to start
+SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+SDR 32 TDI (2) SMASK (fffffffe) TDO (0) Mask(00000000);
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);
+RUNTEST IDLE 20 TCK ;
+
+!clear soc_jtag_com[0]
+SIR 6 TDI (24) SMASK (3F) TDO (01) MASK (3F);
+SDR 1 TDI (0) SMASK (1) TDO (1) Mask(1);
+
+

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view>
+	<!--组控件 text：标题 visable：是否显示(true/false) max：控件最大个数 -->
+	<group text="Custom Basic attribute" visable="false" max="16">
+		<!--复选框 text：标题 default: 值范围{0,1} 0 未选中 ；1 选中-->
+		<button text="SupportFrameRate" default="1"/>
+		<!--下拉框 text：标题 default:默认选中的值 selecttextlist：显示的文本列表 selectvaluelist：值列表-->
+		<combo text="DefaultFrameRate" default="1" selecttextlist="50hz,60hz"  selectvaluelist="0,1"/>
+		<!--微调按钮 text：标题 default: 默认显示的值 min：最小值 max:最大值 digits：累加值-->
+		<spinner text="Width" default="1000" min="720" max="1080" digits="1"/>
+	</group>
+</view>

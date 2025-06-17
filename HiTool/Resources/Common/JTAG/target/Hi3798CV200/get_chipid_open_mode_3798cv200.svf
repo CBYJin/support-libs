@@ -1,0 +1,21 @@
+
+
+! attention TRSTN not controlled by JtagStudio, you should reset TRSTN manually
+
+FREQUENCY 1000000 HZ;
+STATE RESET;
+STATE IDLE;
+
+!RUNTEST IDLE 1000 TCK ;
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! get chipid on open mode
+!!!!!!!!!!!!!!!!!!!!!
+//get chipid 
+SIR 8 TDI (2b) SMASK (3F) TDO (01) MASK (00);
+SDR 64 TDI (FFFFFFFFFFFFFFFF) SMASK (ffffffffffffffff) TDO (1501e6cb49c88ab6) Mask(ffffffffffffffff);
+
+//chipid_rdy
+//SIR 6 TDI (25) SMASK (3F) TDO (01) MASK (00);
+//SDR 1 TDI (1) SMASK (1) TDO (0) Mask(1);

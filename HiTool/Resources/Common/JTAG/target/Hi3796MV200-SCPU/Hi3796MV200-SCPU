@@ -1,0 +1,9 @@
+source [find target/Hi3796MV200-SCPU/Hi3796MV200-SCPU_target.cfg]
+
+reset_config trst_and_srst
+adapter_nsrst_delay 500
+jtag_ntrst_delay 500
+adapter_khz 500
+init
+dap apsel 1
+reset init

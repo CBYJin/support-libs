@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view>
+	<mark value="Hi3731ARQCV2010X00"/>
+	<!--组控件 text：标题 visable：是否显示(true/false) max：控件最大个数 -->
+	<group text="Custom Info" visable="false" max="37">
+		<!--复选框 text：标题 default: 值范围{0,1} 0 未选中 ；1 选中-->
+		<button text="SupportFrameRate" default="1"/>
+	</group>
+</view>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view>
+	<!-- 是否需要发送命令 不填值不发送 type: s3/s6 s3：直接发送命令， s6：使用HiPQ协议发送命令-->
+	<headerCmd command="" type="s3"/>
+	
+	<!--组控件 en：标题  max：控件最大个数-->
+	<window en="Main Interface" zh="主界面" max="48">
+		<!--组标签 max：每一组控件最大个数 4-->
+		<row max="4">
+			<!--按钮 en：英文文本 zh：中文文本 command：发送的命令-->
+			<button en="Power" zh="电源" command="ir_send 0x10029"/>
+			<button en="Mute"  zh="静音" command="ir_send 0x1002B"/>
+			<button en="Source" zh="信源" command="ir_send 0x10044"/>
+		</row>
+		
+		<row max="4">
+			<button en="EPG" zh="节目指南" command="ir_send 0x10021"/>
+			<button en="Aspect" zh="比例模式" command="ir_send 0x10042"/>
+			<button en="Sleep" zh="定时待机" command="ir_send 0x1004C"/>
+			<button en="Info" zh="信息" command="ir_send 0x10028"/>
+		</row>
+		
+		<row max="4">
+			<button en="1" zh="1" command="ir_send 0x31"/>
+			<button en="2" zh="2" command="ir_send 0x32"/>
+			<button en="3" zh="3" command="ir_send 0x33"/>
+			<button en="4" zh="4" command="ir_send 0x34"/>
+		</row>
+		
+		<row max="4">		
+			<button en="5" zh="5" command="ir_send 0x35"/>
+			<button en="6" zh="6" command="ir_send 0x36"/>
+			<button en="7" zh="7" command="ir_send 0x37"/>
+			<button en="8" zh="8" command="ir_send 0x38"/>
+		</row>	
+		
+		<row max="4">		
+			<button en="9" zh="9" command="ir_send 0x39"/>
+			<button en="0" zh="0"  command="ir_send 0x30"/>
+			<button en="SoundMode" zh="声音制式" command="ir_send 0x10041"/>
+			<button en="PictureMode" zh="图像制式" command="ir_send 0x10040"/>
+		</row>
+		
+		<row max="4">	
+			<button en="Return" zh="频道返回" command="ir_send 0x1004B"/>
+			<button en="-/--" zh="-/--" command="ir_send 0x1003F"/>
+			<button en="Exit" zh="退出" command="ir_send 0x10004"/>
+			<button en="Menu" zh="菜单" command="ir_send 0x10015"/>
+		</row>
+			
+		<row max="4">	
+			<button en="Up" zh="上" command="ir_send 0x10006"/>
+		</row>
+		
+		<row max="4">	
+			<button en="Left" zh="左" command="ir_send 0x10008"/>
+			<button en="OK" zh="OK" command="ir_send 0x10000"/>
+			<button en="Right" zh="右" command="ir_send 0x10009"/>
+		</row>	
+		
+		<row max="4">	
+			<button en="Down" zh="下" command="ir_send 0x10007"/>
+		</row>	
+		
+		<row max="4">	
+			<button en="CH-" zh="频道减" command="ir_send 0x1002D"/>
+			<button en="CH+" zh="频道加" command="ir_send 0x1002C"/>
+			<button en="VOL-" zh="音量减" command="ir_send 0x1002F"/>
+			<button en="VOL+" zh="音量加" command="ir_send 0x1002E"/>
+		</row>	
+		
+		<row max="4">		
+			<button en="F1-Red" zh="F1-红键" command="ir_send 0x10034"/>
+			<button en="F2-Green" zh="F2-绿键" command="ir_send 0x10037"/>
+			<button en="F3-Yellow" zh="F3-黄键" command="ir_send 0x10035"/>
+			<button en="F4-Blue" zh="F4-蓝键" command="ir_send 0x10036"/>
+		</row>
+		
+		<row max="4">		
+			<button en="REW" zh="快退" command="ir_send 0x10018"/>
+			<button en="Play/Pause" zh="播放/暂停" command="ir_send 0x1003E"/>
+			<button en="Stop" zh="停止" command="ir_send 0x10017"/>
+			<button en="FF" zh="快进" command="ir_send 0x10019"/>
+		</row>
+		
+		<row max="4">		
+			<button en="PageUp" zh="上一页" command="ir_send 0x1000A"/>
+			<button en="PageDown" zh="下一页" command="ir_send 0x1000B"/>
+			<button en="CC" zh="隐藏字幕" command="ir_send 0x10045"/>
+			<button en="MTS" zh="音轨" command="ir_send 0x10049"/>
+		</row>
+		
+	</window>
+</view>

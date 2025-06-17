@@ -1,0 +1,37 @@
+;
+;	スペクトルからの計算値(D65)
+;	重み付けは、MacAdam 楕円と、マクベスチャートの色の分散から決定してある
+;
+ChartName=Standard Macbeth Chart
+ChartRect=1606,1588,2494,2197		; チャートの定義域(周りの黒い余白を含まない領域、左上パッチの左上から右下パッチの右下まで)
+PatchCount=6,4						; パッチの数
+PatchCenterTopLeft=1674,1655		; 左上パッチの中心点
+PatchCenterBottomRight=2432,2103	; 右下パッチの中心点
+PatchWidthHeight=60,60				; パッチの大きさ(実際の大きさでなく、スキャンするエリアの大きさを記述)
+ColorSpace=CIExyY					; チャート定義のカラースペース(CIE 1931 xyY)
+;	D65光源２度視野			チャート基準データとして書き出すもの(xyY) [忠実再現用]					
+;	重み	列	行	x	y	Y			
+TargetColor=	0.7785	0	0	0.410453	0.363017	9.842376	;	dark skin	1.暗い肌色
+TargetColor=	1.0000	1	0	0.382650	0.357061	36.095062	;	light skin	2.明るい肌色
+TargetColor=	0.6944	2	0	0.249824	0.266932	19.354779	;	blue sky	3.青空の色
+TargetColor=	1.0000	3	0	0.339356	0.435940	13.171634	;	foliage	4.草の色
+TargetColor=	0.8789	4	0	0.270359	0.255180	24.732040	;	blue flower	5.青色の花
+TargetColor=	0.5625	5	0	0.263465	0.359921	43.344469	;	bluish green	6.青みの緑色
+TargetColor=	0.8789	0	1	0.508584	0.409027	29.748231	;	orange	7.オレンジ色
+TargetColor=	0.5102	1	1	0.214971	0.188380	11.926577	;	purplish blue	8.紫み青色
+TargetColor=	0.6973	2	1	0.463211	0.312948	19.503613	;	moderate red	9.中程の赤色
+TargetColor=	0.8789	3	1	0.290374	0.218195	6.616927	;	purple	10.紫色
+TargetColor=	1.0000	4	1	0.377034	0.495844	44.287914	;	yellow green	11.黄緑色
+TargetColor=	0.8789	5	1	0.472533	0.441273	43.749479	;	orange yellow	12.オレンジ
+TargetColor=	0.4305	0	2	0.188408	0.139542	6.319884	;	blue	13青色
+TargetColor=	0.5625	1	2	0.304700	0.495267	23.909636	;	green	14.緑色
+TargetColor=	1.3946	2	2	0.542348	0.317885	11.995623	;	red	15.赤色
+TargetColor=	0.8789	3	2	0.447525	0.476195	60.495624	;	yellow	16.黄色
+TargetColor=	0.5102	4	2	0.372499	0.243994	19.545874	;	magenta	17.マゼンタ色
+TargetColor=	0.6973	5	2	0.195953	0.268918	20.152607	;	cyan	18.シアン色
+TargetColor=	GRAY	0	3	0.313602	0.330696	90.000000	;	white	19.白色
+TargetColor=	GRAY	1	3	0.313208	0.329209	59.225222	;	neutral 8	20.グレイ8
+TargetColor=	GRAY	2	3	0.312637	0.328814	36.332456	;	neutral 6.5	21.グレイ6.5
+TargetColor=	GRAY	3	3	0.312604	0.328715	20.597493	;	neutral 5	22.グレイ5
+TargetColor=	GRAY	4	3	0.310418	0.327435	9.392116	;	neutral 3.5	23.グレイ3.5
+TargetColor=	GRAY	5	3	0.307658	0.323911	3.403158	;	black	24.黒色

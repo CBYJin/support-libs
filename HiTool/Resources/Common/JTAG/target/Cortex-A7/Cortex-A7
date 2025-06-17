@@ -1,0 +1,7 @@
+source [find target/Cortex-A7/A7_target.cfg]
+
+
+#force into run stage
+#then can run command
+init   
+reset init  

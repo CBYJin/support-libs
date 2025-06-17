@@ -1,0 +1,7 @@
+source [find target/Hi3716MV430-ACPU/Hi3716MV430_target.cfg]
+
+
+#force into run stage
+#then can run command
+init   
+reset init  

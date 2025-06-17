@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view>
+	<!-- 是否需要发送命令 不填值不发送 type: s3/s6 s3：直接发送命令， s6：使用HiPQ协议发送命令-->
+	<headerCmd command="36864" type="s6"/>
+	
+	<!--组控件 en：标题  max：控件最大个数-->
+	<window en="Main Interface" zh="主界面" max="48">
+		<!--组标签 max：每一组控件最大个数 4-->
+		<row max="4">
+			<!--按钮 en：英文文本 zh：中文文本 command：发送的命令-->
+			<button en="Power" zh="电源" command="116"/>
+			<button en="Mute"  zh="静音" command="113"/>
+			<button en="Source" zh="信源" command="250"/>
+		</row>
+		
+		<row max="4">
+			<button en="EPG" zh="节目指南" command="362"/>
+			<button en="Aspect" zh="比例模式" command="372"/>
+			<button en="3D" zh="3D" command="251"/>
+			<button en="Info" zh="信息" command="358"/>
+		</row>
+		
+		<row max="4">
+			<button en="1" zh="1" command="2"/>
+			<button en="2" zh="2" command="3"/>
+			<button en="3" zh="3" command="4"/>
+			<button en="4" zh="4" command="5"/>
+		</row>
+		
+		<row max="4">		
+			<button en="5" zh="5" command="6"/>
+			<button en="6" zh="6" command="7"/>
+			<button en="7" zh="7" command="8"/>
+			<button en="8" zh="8" command="9"/>
+		</row>	
+		
+		<row max="4">		
+			<button en="9" zh="9" command="10"/>
+			<button en="0" zh="0"  command="11"/>
+			<button en="SoundMode" zh="声音制式" command="252"/>
+			<button en="PictureMode" zh="图像制式" command="248"/>
+		</row>
+		
+		<row max="4">	
+			<button en="Return" zh="返回" command="158"/>
+			<button en="Home" zh="Home" command="102"/>
+			<button en="Freeze" zh="全局菜单" command="253"/>
+			<button en="Menu" zh="菜单" command="139"/>
+		</row>
+			
+		<row max="4">	
+			<button en="Up" zh="上" command="103"/>
+		</row>
+		
+		<row max="4">	
+			<button en="Left" zh="左" command="105"/>
+			<button en="OK" zh="OK" command="28"/>
+			<button en="Right" zh="右" command="106"/>
+		</row>	
+		
+		<row max="4">	
+			<button en="Down" zh="下" command="108"/>
+		</row>	
+		
+		<row max="4">	
+			<button en="CH-" zh="频道减" command="403"/>
+			<button en="CH+" zh="频道加" command="402"/>
+			<button en="VOL-" zh="音量减" command="114"/>
+			<button en="VOL+" zh="音量加" command="115"/>
+		</row>	
+		
+		<row max="4">		
+			<button en="F1" zh="F1" command="398"/>
+			<button en="F2" zh="F2" command="399"/>
+			<button en="F3" zh="F3" command="400"/>
+			<button en="F4" zh="F4" command="401"/>
+		</row>
+		
+		<row max="4">		
+			<button en="Mix" zh="快退" command="168"/>
+			<button en="Index" zh="播放/暂停" command="164"/>
+			<button en="SubPage" zh="停止" command="128"/>
+			<button en="Size" zh="快进" command="208"/>
+		</row>
+		
+		<row max="4">		
+			<button en="PageUp" zh="PageUp" command="104"/>
+			<button en="PageDown" zh="PageDown" command="109"/>
+			<button en="Subtitle" zh="字幕" command="370"/>
+			<button en="NicamMTS" zh="丽音/音轨" command="254"/>
+		</row>
+		
+		<row max="4">		
+			<button en="TeleTextCC" zh="图文" command="255"/>
+			<button en="Internet" zh="Internet" command="256"/>
+			<button en="Swap" zh="Swap" command="257"/>
+			<button en="PIP" zh="PIP" command="258"/>
+		</row>
+		
+	</window>
+</view>

@@ -1,0 +1,3 @@
+source [find target/Hi3798MV200/Hi3798MV200_target.cfg]
+init   
+reset init  

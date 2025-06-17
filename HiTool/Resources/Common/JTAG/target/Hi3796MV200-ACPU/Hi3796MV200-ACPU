@@ -1,0 +1,4 @@
+source [find target/Hi3796MV200-ACPU/Hi3796MV200_target.cfg]
+init   
+reset init
+dap memaccess 8  

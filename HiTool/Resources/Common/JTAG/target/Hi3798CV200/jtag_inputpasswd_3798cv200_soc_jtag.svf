@@ -1,0 +1,66 @@
+
+
+! attention TRSTN not controlled by JtagStudio, you should reset TRSTN manually
+
+FREQUENCY 1000000 HZ;
+STATE RESET;
+STATE IDLE;
+
+!RUNTEST IDLE 1000 TCK ;
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! the first input wrong jtag key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+!SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+!SDR 64 TDI (2354ab98d019ff30) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(ffffffffffffffff);
+
+!password_rdy
+!SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+!SDR 32 TDI (00000004) SMASK (ffffffff) TDO (00000000) Mask(00000000);
+
+
+
+!!!!!!!!!!!!!!!!!!!!!
+! the second input right jtag key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+SDR 64 TDI (2004c11fce98ba97) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+                                             
+!all 0 key test
+!SDR 64 TDI (0000000000000000) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!all 1 key test
+!SDR 64 TDI (ffffffffffffffff) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+!password_rdy
+SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+SDR 32 TDI (00000004) SMASK (ffffffff) TDO (00000000) Mask(00000000);
+
+RUNTEST IDLE 1 TCK;
+
+!!!!!!!!!!!!!!!!!!!!!
+! the third input wrong key
+!!!!!!!!!!!!!!!!!!!!!
+
+!input password  
+!SIR 6 TDI (23) SMASK (3F) TDO (01) MASK (3F);
+!SDR 64 TDI (2354ab98d019ff30) SMASK (ffffffffffffffff) TDO (00000000000000000) Mask(00000000000000000);
+
+
+!password_rdy
+!SIR 6 TDI (26) SMASK (3F) TDO (01) MASK (3F);
+!SDR 32 TDI (00000004) SMASK (ffffffff) TDO (00000000) Mask(00000000);
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                              

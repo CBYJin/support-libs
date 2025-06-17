@@ -1,0 +1,8 @@
+source [find target/Cortex-M3/cortex_m3_target.cfg]
+
+reset_config trst_and_srst
+adapter_nsrst_delay 500
+jtag_ntrst_delay 500
+adapter_khz 500
+init
+reset init

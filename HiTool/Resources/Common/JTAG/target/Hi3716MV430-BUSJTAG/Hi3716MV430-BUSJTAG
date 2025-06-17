@@ -1,0 +1,3 @@
+source [find target/Hi3716MV430-BUSJTAG/Hi3716MV430_target.cfg]
+init   
+dap apsel 2

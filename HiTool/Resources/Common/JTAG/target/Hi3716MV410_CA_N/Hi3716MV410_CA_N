@@ -1,0 +1,7 @@
+source [find target/Hi3716MV410_CA_N/Hi3716MV410_target_test.cfg]
+
+
+#force into run stage
+#then can run command
+init   
+reset init  
